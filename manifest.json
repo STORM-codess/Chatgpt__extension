@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AskHistory",
+  "version": "1.0.0",
+  "description": "Navigate and view user messages on chatgpt.com with a modern, user-friendly UI.",
+  "permissions": ["scripting", "activeTab", "sidePanel", "storage"],
+  "host_permissions": ["https://chatgpt.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "action": {
+    "default_title": "Open AskHistory"
+  },
+  "icons": {
+    "48": "app_icon.png",
+    "128": "app_icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
