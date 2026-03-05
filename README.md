@@ -1,5 +1,5 @@
 # AskHistory Chrome Extension
-
+Lost in your chats?
 AskHistory is a Chrome extension that enhances your experience on chatgpt.com by allowing you to view, search, categorize, and bookmark your message history in a convenient side panel.
 
 ## Features
